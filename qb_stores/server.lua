@@ -98,7 +98,7 @@ AddEventHandler("qb_stores:getJob",function(key)
 			end
 			local sql = "SELECT citizenid FROM store_business WHERE market_id = @market_id";
 			exports['ghmattimysql']:execute(sql, {['@market_id'] = key}, function(result2)
-				if result2[1].user_id == user_id then
+				if result2[1].citizendid == user_id then
 					TriggerClientEvent("Notify",source,"negado",Lang[Config.lang]['cannot_do_own_job'])
 					query = nil
 				end

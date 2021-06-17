@@ -96,13 +96,15 @@ AddEventHandler("qb_stores:getJob",function(key)
 			if query == nil then
 				TriggerClientEvent("Notify",source,"negado",Lang[Config.lang]['no_available_jobs'])
 			end
-			local sql = "SELECT citizenid FROM store_business WHERE market_id = @market_id";
-			exports['ghmattimysql']:execute(sql, {['@market_id'] = key}, function(result2)
-				if result2[1].citizendid == user_id then
-					TriggerClientEvent("Notify",source,"negado",Lang[Config.lang]['cannot_do_own_job'])
-					query = nil
+			exports['ghmattimysql']:execute("SELECT citizenid FROM store_business WHERE market_id = @market_id", {['@market_id'] = key}, function(result2)
+				local query2 = result2
+				if query2[1] then
+					if query2[1].citizenid == user_id then
+						TriggerClientEvent("Notify",source,"negado",Lang[Config.lang]['cannot_do_own_job'])
+						query = nil
+					end
 				end
-				TriggerClientEvent("qb_stores:getJob",source,key,query)
+					TriggerClientEvent("qb_stores:getJob",source,key,query)
 			end)
 		end)
 	end

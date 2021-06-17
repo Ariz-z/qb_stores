@@ -1,0 +1,442 @@
+body {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: #0000006e !important;
+}
+
+.main {
+	width: 1280px;
+	height: 726px;
+	background-color: #f5f6f8;
+	border-radius: 0px 20px 20px 0px;
+	display: grid;
+    grid-template-columns: 80px 1200px;
+}
+
+/*===========================*/
+/*========= SIDEBAR =========*/
+/*===========================*/
+
+.sidebar-navigation {
+	display: inline-block;
+	height: 100%;
+	width: 80px;
+	background-color: #313443;
+}
+
+.sidebar-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "Lato", sans-serif;
+	line-height: 1;
+	text-align: center;
+	color: white;
+	height: 100%;
+}
+
+.sidebar-navigation ul li {
+	padding: 20px 0;
+	cursor: pointer;
+	transition: all ease-out 120ms;
+    max-height: 66px;
+}
+
+.sidebar-navigation ul li i {
+	display: block;
+	font-size: 24px;
+	transition: all ease 450ms;
+	width: 100%;
+}
+
+.sidebar-navigation ul li .tooltip {
+	display: inline-block;
+	position: relative;
+	background-color: #313443;
+	padding: 8px 15px;
+	border-radius: 3px;
+	margin-top: -26px;
+	left: 90px;
+	opacity: 0;
+	visibility: hidden;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	width: 100px;
+}
+
+.sidebar-navigation ul li .tooltip:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -4px;
+	top: 10px;
+	transform: rotate(45deg);
+	width: 10px;
+	height: 10px;
+	background-color: inherit;
+}
+
+.sidebar-navigation ul li:hover {
+	background-color: #22252e;
+}
+
+.sidebar-navigation ul li:hover .tooltip {
+	visibility: visible;
+	opacity: 1;
+	transition: all ease 450ms;
+}
+
+.sidebar-navigation ul li.active {
+	background-color: #22252e;
+}
+
+.sidebar-navigation ul li.active i {
+	color: #98d7ec;
+}
+
+/*=========================*/
+/*========= PAGES =========*/
+/*=========================*/
+
+.container-pages {
+	height: 726px;
+}
+
+.pages {
+	display: none;
+	padding: 20px;
+    height: 100%;
+    overflow: auto;
+}
+
+.main-page {
+	display: block;
+}
+
+.list li {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #e3dada;
+    margin-top: 12px;
+    border-radius: 5px;
+    background: #fff
+}
+
+.checkicon {
+    color: green;
+    font-size: 19px
+}
+.redicon {
+    color: red;
+    font-size: 19px
+}
+/*=========================*/
+/*========= SKILL =========*/
+/*=========================*/
+
+.container-progresses{
+    padding: 10px;
+    border: 1px solid #e3dada;
+    margin-top: 12px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.progresses {
+    display: flex;
+	align-items: center;
+	margin: 15px;
+}
+
+.line {
+    width: 120px;
+    height: 6px;
+    background: #63d19e
+}
+.redline {
+    width: 120px;
+    height: 6px;
+    background: #d16363
+}
+
+.steps {
+    display: flex;
+    background-color: #63d19e;
+    color: #fff;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%
+}
+
+.redsteps {
+    display: flex;
+    background-color: #d16363;
+    color: #fff;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%
+}
+
+.redsteps:hover {
+    background-color: #a32d2d;
+    cursor: pointer;
+}
+
+.skill-description {
+	font-size: 13px;
+}
+
+.collapsible {
+	background-color: #ebebeb;
+	color: #000000;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+}
+
+.active, .collapsible:hover {
+	background-color: #b9b9b9;
+}
+
+.content {
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
+	background-color: #f1f1f1;
+	font-size: 13px;
+}
+
+.accordion_two_section {
+    background: #f7f7f7
+}
+
+.ptb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px
+}
+
+.accordionTwo .panel-group {
+    margin-bottom: 0
+}
+
+.accordionTwo .panel {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 10px solid transparent;
+    border-radius: 0;
+    margin: 0
+}
+
+.accordionTwo .panel-default {
+    border: 0
+}
+
+.accordionTwo .panel-default>.panel-heading {
+    background: #4385f5;
+    border-radius: 0px;
+    border-color: #4385f5
+}
+
+.accordion-wrap .panel-heading {
+    padding: 0px;
+    border-radius: 0px
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit
+}
+
+.accordionTwo .panel .panel-heading a.collapsed {
+    color: #999999;
+    background-color: #fff;
+    display: block;
+    padding: 12px 20px
+}
+
+.accordionTwo .panel .panel-heading a {
+    display: block;
+    padding: 12px 20px;
+    color: #fff
+}
+
+.accordion-wrap .panel .panel-heading a {
+    font-size: 14px
+}
+
+.accordionTwo .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 0;
+    padding-top: 0;
+    padding: 20px 20px 20px 30px;
+    background: #4385f5;
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px
+}
+
+.accordionTwo .panel .panel-heading a:after {
+    content: "\2212";
+    color: #4285f4;
+    background: #fff
+}
+
+.accordionTwo .panel .panel-heading a:after,
+.accordionTwo .panel .panel-heading a.collapsed:after {
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    float: right;
+    width: 21px;
+    display: block;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    border-radius: 50%;
+    color: #FFF
+}
+
+.accordionTwo .panel .panel-heading a.collapsed:after {
+    content: "\2b";
+    color: #fff;
+    background-color: #DADADA
+}
+
+.accordionTwo .panel .panel-heading a:after {
+    content: "\2212";
+    color: #4285f4;
+    background: #dadada
+}
+
+a:link {
+    text-decoration: none
+}
+
+/*==========================*/
+/*========= BANK =========*/
+/*==========================*/
+
+.bank-page .card-content:hover{
+    background-color: #dfdfdf;
+    cursor: pointer;
+}
+
+.deposit-money{
+    display: block;
+    margin-bottom: 5px;
+    padding: 0px;
+}
+
+.deposit-money-btn{
+    padding: 3px 12px !important;
+}
+
+#market-form{
+    margin-block-end: 0em;
+}
+
+/*=========================*/
+/*========= MODAL =========*/
+/*=========================*/
+
+.modal-confirm {		
+    color: #636363;
+    width: 400px;
+}
+.modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+.modal-confirm .modal-header {
+    border-bottom: none;   
+    position: relative;
+}
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+}
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+}
+.modal-confirm .modal-body {
+    color: #999;
+}
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;		
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+}
+.modal-confirm .modal-footer a {
+    color: #999;
+}		
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+}
+.modal-confirm .icon-box i {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 13px;
+}
+.modal-confirm .btn, .modal-confirm .btn:active {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+.modal-confirm .btn-secondary {
+    background: #c1c1c1;
+}
+.modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
+    background: #a8a8a8;
+}
+.modal-confirm .btn-danger {
+    background: #f15e5e;
+}
+.modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+    background: #ee3535;
+}
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
+
+/*=============================*/
+/*========= SCROLLBAR =========*/
+/*=============================*/
+
+::-webkit-scrollbar {
+	display: none;
+}

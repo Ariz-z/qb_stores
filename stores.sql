@@ -25,12 +25,17 @@ CREATE TABLE IF NOT EXISTS `store_business` (
   PRIMARY KEY (`market_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE IF NOT EXISTS `store_jobs` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `market_id` varchar(50) NOT NULL DEFAULT '',
-  `name` varchar(50) NOT NULL,
-  `reward` int(10) unsigned NOT NULL DEFAULT 0,
-  `amount` int(11) NOT NULL DEFAULT 0,
-  `progress` bit(1) NOT NULL DEFAULT b'0',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `store_jobs` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`market_id` VARCHAR(50) NOT NULL DEFAULT '' COLLATE 'utf8mb4_general_ci',
+	`name` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`reward` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+	`product` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb4_general_ci',
+	`amount` INT(11) NOT NULL DEFAULT '0',
+	`progress` BIT(1) NOT NULL DEFAULT b'0',
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+;
+

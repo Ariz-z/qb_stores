@@ -53,7 +53,7 @@ AddEventHandler("qb_stores:getData",function(key)
 						if result2 and result2[1] then
 							TriggerClientEvent("Notify",source,"negado",Lang[Config.lang]['already_has_business'])
 						else
-							money = xPlayer.Functions.GetMoney("bank")
+							money = xPlayer.PlayerData.money["bank"]
 							if money >= price then
 								xPlayer.Functions.RemoveMoney("bank", price)
 								local sql = "INSERT INTO `store_business` (citizenid,market_id,stock) VALUES (@user_id,@market_id,@stock);";
@@ -206,7 +206,7 @@ AddEventHandler("qb_stores:buyItem",function(key,data)
 			if arr_stock[data.item_id] >= data.amount then
 				local itemDef = Config.market_types[Config.market_locations[key].type].market_items[data.item_id]
 				local total_price = itemDef.price_to_customer*data.amount
-				money = xPlayer.Functions.GetMoney("bank")
+				money = xPlayer.PlayerData.money["bank"]
 				if money >= total_price then
 					xPlayer.Functions.RemoveMoney('bank', total_price)
 					TriggerEvent("stores:addInventoryItem", xPlayer, data.item_id, data.amount)
@@ -339,7 +339,7 @@ AddEventHandler("qb_stores:depositMoney",function(key,data)
 	if user_id then
 		local amount = tonumber(data.amount)
 		if amount and amount > 0 then
-			money = xPlayer.Functions.GetMoney("bank")
+			money = xPlayer.PlayerData.money["bank"]
 			if money >= amount then
 				xPlayer.Functions.RemoveMoney('bank', amount)
 				giveMarketMoney(key,amount)
